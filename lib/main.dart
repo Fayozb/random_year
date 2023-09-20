@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'event_date.dart';
+import 'home_page.dart';
 import 'manager.dart';
 
 Future<void> main() async {
@@ -15,6 +15,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: EventsDate());
+        debugShowCheckedModeBanner: false, home: HomePage());
   }
 }
