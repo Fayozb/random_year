@@ -2,4 +2,5 @@
 
 
 
-<img src="https://github.com/Fayozb/random_year/assets/134942247/358fd24c-910e-4e9a-a7b0-210a6c5aa798" width="300" height="650"/>
+
+<img src="https://github.com/Fayozb/random_year/assets/134942247/9fec8e39-c885-4368-90ea-201e05801e63" width="300" height="650"/>
