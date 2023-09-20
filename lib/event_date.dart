@@ -41,29 +41,36 @@ class _EventsDateState extends State<EventsDate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      backgroundColor: Colors.indigo,
       body: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            _isloading
-                ? const Center(child: CircularProgressIndicator(color: Colors.white,))
-                : Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                '${_randomEvent?.text}',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
             const SizedBox(
-              height: 50,
+              height: 40,
             ),
+            _isloading
+                ? const Center(
+                    child: CircularProgressIndicator(
+                    color: Colors.white,
+                  ))
+                : Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Text(
+                      '${_randomEvent?.text}',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:20),
+              padding: const EdgeInsets.all(40),
               child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(minimumSize:const Size.fromHeight(60),backgroundColor: Colors.white),
+                  style: ElevatedButton.styleFrom(
+                      minimumSize: const Size.fromHeight(60),
+                      backgroundColor: Colors.white),
                   onPressed: () {
                     _getEvent();
                   },
@@ -76,7 +83,6 @@ class _EventsDateState extends State<EventsDate> {
                   )),
             ),
           ])),
-      backgroundColor: Colors.black,
     );
   }
 }

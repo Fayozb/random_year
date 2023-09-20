@@ -3,7 +3,8 @@ class Event {
     String? text,
     int? number,
     bool? found,
-    String? type,}){
+    String? type,
+  }) {
     _text = text;
     _number = number;
     _found = found;
@@ -16,22 +17,31 @@ class Event {
     _found = json['found'];
     _type = json['type'];
   }
+
   String? _text;
   int? _number;
   bool? _found;
   String? _type;
-  Event copyWith({  String? text,
+
+  Event copyWith({
+    String? text,
     int? number,
     bool? found,
     String? type,
-  }) => Event(  text: text ?? _text,
-    number: number ?? _number,
-    found: found ?? _found,
-    type: type ?? _type,
-  );
+  }) =>
+      Event(
+        text: text ?? _text,
+        number: number ?? _number,
+        found: found ?? _found,
+        type: type ?? _type,
+      );
+
   String? get text => _text;
+
   int? get number => _number;
+
   bool? get found => _found;
+
   String? get type => _type;
 
   Map<String, dynamic> toJson() {
@@ -42,5 +52,4 @@ class Event {
     map['type'] = _type;
     return map;
   }
-
 }
